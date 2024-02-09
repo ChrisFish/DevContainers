@@ -1,0 +1,8 @@
+{
+    "name": "Api_Container",
+    "dockerComposeFile": ["../../docker-compose.yml"],
+    "service": "apicontainer",
+    "shutdownAction": "none",
+    "workspaceFolder": "/workspace/api-src",
+    "postStartCommand": "git config --global --add safe.directory /workspace"
+}
