@@ -16,3 +16,5 @@ https://dev.to/azure/devcontainers-for-azure-and-net-5942
 Using containers with docker-compose
 https://stackoverflow.com/questions/69635634/how-to-use-vs-code-dev-container-with-existing-docker-compose-file
 
+Setting up prebuilds
+https://containers.dev/guide/prebuild

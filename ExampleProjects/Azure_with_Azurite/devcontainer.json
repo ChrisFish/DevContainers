@@ -25,6 +25,7 @@
       "uid": "1000",
       "gid": "1000"
     },
+    "ghcr.io/devcontainers/features/node:1":{},
     "ghcr.io/devcontainers/features/azure-cli:1": {
           "version": "latest"
         }
@@ -35,7 +36,10 @@
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				//"ms-dotnettools.csharp"
+				"ms-dotnettools.csharp",
+        "ms-azuretools.vscode-azurefunctions",
+        "ms-azuretools.vscode-azure-account",
+        "ms-azuretools.vscode-azurestorage"
 			],
       "settings": {
           "editor.minimap.enabled": false,
