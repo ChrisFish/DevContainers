@@ -1,0 +1,52 @@
+{
+    "name": "Azure_Container",
+    "service": "workspace",
+    "workspaceFolder": "/workspace/",
+    "forwardPorts": [
+        // Azure Functions
+        7071,
+        // ASP.NET Core Web/API App, Blazor App
+        5000, 5001,
+        // Azure Static Web App CLI
+        4280
+      ],
+    "dockerComposeFile": [
+      "docker-compose.yml",
+      "docker-compose.workspace.yml"
+  ],
+  "remoteUser": "vscode",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true,
+      "upgradePackages": true,
+      "username": "vscode",
+      "uid": "1000",
+      "gid": "1000"
+    },
+    "ghcr.io/devcontainers/features/azure-cli:1": {
+          "version": "latest"
+        }
+  },
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				//"ms-dotnettools.csharp"
+			],
+      "settings": {
+          "editor.minimap.enabled": false,
+          // Uncomment if you want to use zsh as the default shell
+          "terminal.integrated.defaultProfile.linux": "zsh",
+          "terminal.integrated.profiles.linux": {
+            "zsh": {
+              "path": "/usr/bin/zsh"
+            }
+          }
+      }
+    }
+  }
+}
