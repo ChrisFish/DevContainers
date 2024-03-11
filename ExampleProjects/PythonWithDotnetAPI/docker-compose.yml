@@ -1,6 +1,7 @@
 version: '3'
 services:
   apicontainer:
+    platform: linux/arm64
     build:
       context: .
       dockerfile: .devcontainer/apicontainer/dockerfile
@@ -11,6 +12,7 @@ services:
       - pythoncontainer
 
   pythoncontainer:
+    platform: linux/arm64
     build:
       context: .
       dockerfile: .devcontainer/pythoncontainer/dockerfile

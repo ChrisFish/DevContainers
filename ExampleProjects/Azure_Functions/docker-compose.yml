@@ -1,0 +1,15 @@
+version: '3'
+services:
+  azuredev:
+    build:
+      context: .
+      dockerfile: .devcontainer/azuredev/dockerfile
+    volumes:
+      - .:workspace:cached
+    command: sleep infinity
+    network_mode: service:azurite
+  
+  azurite:
+    platform: linux/arm64
+    image: mcr.microsoft.com/azure-storage/azurite
+    restart: unless-stopped

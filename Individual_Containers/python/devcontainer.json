@@ -1,0 +1,7 @@
+{
+    "name": "Python_Container", //name of the container
+    "dockerComposeFile": ["../../docker-compose.yml"], //if using a docker compose to spin up multiple, update path here
+    "service": "pythoncontainer", //docker compose service name
+    "shutdownAction": "none",
+    "workspaceFolder": "/workspace/python-src" //where the source project to be worked on in python container is located
+}
