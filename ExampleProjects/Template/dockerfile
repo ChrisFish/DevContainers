@@ -1,3 +1,0 @@
-ARG VARIANT="8.0-bookworm"
-FROM --platform=amd64 mcr.microsoft.com/devcontainers/dotnet:${VARIANT}
-# Debian linux dotnet based devcontainer from microsoft using amd64 emulation 

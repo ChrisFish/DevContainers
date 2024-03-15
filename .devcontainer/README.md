@@ -1,7 +1,12 @@
 # Template example
 This is a template devcontainer folder with examples and steps to set up a new project container.
+This setup is for a devcontainer with addtional docker containers (docker-compose)
 
 Keep notes here
+
+## devcontainer.env
+Loaded environment variables added to devcontainer. Not checked into source control via .gitignore
+Must be created if not existed on git clone
 
 ## devcontainer.json notes
 

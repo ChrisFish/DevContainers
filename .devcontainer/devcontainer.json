@@ -30,7 +30,7 @@
   },
   "ghcr.io/devcontainers/features/node:1":{}, //install node from nvm (must be in base image. Most MS ones have it)
   "ghcr.io/devcontainers-contrib/features/prettier:1":{} //prettier code formatter
-},
+  },
 // Configure tool-specific properties.
 "customizations": {
   // Configure properties specific to VS Code.
@@ -40,7 +40,8 @@
           "dbaeumer.vscode-eslint", //eslint
           "esbenp.prettier-vscode", //prettier extension
           "editorconfig.editorconfig", //editorconfig linting
-          "ms-dotnettools.csharp"
+          "ms-dotnettools.csharp",
+          "ms-azuretools.vscode-docker" //docker recommended to run in container
     ],
     "settings": {
         "editor.minimap.enabled": false,
