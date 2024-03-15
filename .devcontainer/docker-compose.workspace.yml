@@ -7,9 +7,11 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
+    env_file: devcontainer.env
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ..:/workspace:cached
+      - ~/.ssh:/home/user/.ssh:ro
     depends_on:
       - azurite
     tty: true           # <- keeps container running

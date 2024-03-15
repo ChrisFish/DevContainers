@@ -13,10 +13,13 @@
   "dockerComposeFile": [
     "docker-compose.yml",
     "docker-compose.workspace.yml"
-],
-"remoteUser": "vscode",
-"features": {
-  "ghcr.io/devcontainers/features/common-utils:2": {
+  ],
+  "remoteUser": "vscode",
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
     "installZsh": true,
     "configureZshAsDefaultShell": true,
     "installOhMyZsh": true,
@@ -36,10 +39,12 @@
     "extensions": [
           "dbaeumer.vscode-eslint", //eslint
           "esbenp.prettier-vscode", //prettier extension
+          "editorconfig.editorconfig", //editorconfig linting
           "ms-dotnettools.csharp"
     ],
     "settings": {
         "editor.minimap.enabled": false,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
         // Uncomment if you want to use zsh as the default shell
         "terminal.integrated.defaultProfile.linux": "zsh",
         "terminal.integrated.profiles.linux": {
