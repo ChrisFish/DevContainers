@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 networks:
   myNetwork:
     name: myNetwork
@@ -12,8 +12,7 @@ services:
       - ..:/workspace:cached
     depends_on:
       - azurite
-    tty: true           # <- keeps container running
+    tty: true # <- keeps container running
     networks:
       - myNetwork
-
 # default example of a workspace spinning up docker compose

@@ -1,0 +1,55 @@
+{
+  "name": "Template",
+  "service": "workspace",
+  "workspaceFolder": "/workspace/",
+  "forwardPorts": [
+    // Azure Functions
+    //7071,
+    // ASP.NET Core Web/API App, Blazor App
+    //5000, 5001,
+    // Azure Static Web App CLI
+    //4280
+  ],
+  "dockerComposeFile": ["docker-compose.yml", "docker-compose.workspace.yml"],
+  "remoteUser": "vscode",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true,
+      "upgradePackages": true,
+      "username": "vscode",
+      "uid": "1000",
+      "gid": "1000"
+    },
+    "ghcr.io/devcontainers/features/node:1": {}, //install node from nvm (must be in base image. Most MS ones have it)
+    "ghcr.io/devcontainers/features/azure-cli:1": {
+      "version": "latest"
+    }, // Azure CLI
+    "ghcr.io/devcontainers-contrib/features/prettier:1": {} //prettier code formatter
+  },
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "esbenp.prettier-vscode", //prettier extension
+        "ms-dotnettools.csharp",
+        "ms-azuretools.vscode-azurefunctions",
+        "ms-azuretools.vscode-azure-account",
+        "ms-azuretools.vscode-azurestorage"
+      ],
+      "settings": {
+        "editor.minimap.enabled": false,
+        // Uncomment if you want to use zsh as the default shell
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "/usr/bin/zsh"
+          }
+        }
+      }
+    }
+  }
+}

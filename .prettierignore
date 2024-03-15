@@ -1,0 +1,2 @@
+# Ignore artifact directories in addition to .gitignore
+.devcontainer
